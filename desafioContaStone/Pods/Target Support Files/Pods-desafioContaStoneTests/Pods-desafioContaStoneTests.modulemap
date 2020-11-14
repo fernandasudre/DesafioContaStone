@@ -1,0 +1,6 @@
+framework module Pods_desafioContaStoneTests {
+  umbrella header "Pods-desafioContaStoneTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

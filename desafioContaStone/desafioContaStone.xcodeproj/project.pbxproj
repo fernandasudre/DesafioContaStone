@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E29B61ED2BF09AEC24109A8 /* Pods_desafioContaStone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47411819B5FCD88EBC877A35 /* Pods_desafioContaStone.framework */; };
+		733B50DB4B9091201DA1E6EB /* Pods_desafioContaStoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60BEDD17CD233427C6ABC84C /* Pods_desafioContaStoneTests.framework */; };
+		7CF86E3EA519322F1C22BCCF /* Pods_desafioContaStone_desafioContaStoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F94FBFF867B4EB603A983 /* Pods_desafioContaStone_desafioContaStoneUITests.framework */; };
+		C93F84EC255CBD5300A2F396 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F84EB255CBD5300A2F396 /* AppCoordinator.swift */; };
+		C93F84F1255CBE1200A2F396 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F84F0255CBE1200A2F396 /* FactViewModel.swift */; };
+		C93F84F6255CBE6D00A2F396 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F84F5255CBE6D00A2F396 /* FactsListViewModel.swift */; };
+		C93F84FB255CC3CF00A2F396 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F84FA255CC3CE00A2F396 /* Fact.swift */; };
+		C93F8501255CC74A00A2F396 /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F8500255CC74A00A2F396 /* FactService.swift */; };
 		C94BF945255C2070008B5A06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BF944255C2070008B5A06 /* AppDelegate.swift */; };
 		C94BF947255C2070008B5A06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BF946255C2070008B5A06 /* SceneDelegate.swift */; };
 		C94BF949255C2070008B5A06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BF948255C2070008B5A06 /* ViewController.swift */; };
@@ -35,6 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		209EC8534691A0BDA6016DF8 /* Pods-desafioContaStone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStone.debug.xcconfig"; path = "Target Support Files/Pods-desafioContaStone/Pods-desafioContaStone.debug.xcconfig"; sourceTree = "<group>"; };
+		47411819B5FCD88EBC877A35 /* Pods_desafioContaStone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafioContaStone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BEDD17CD233427C6ABC84C /* Pods_desafioContaStoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafioContaStoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		676F94FBFF867B4EB603A983 /* Pods_desafioContaStone_desafioContaStoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafioContaStone_desafioContaStoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84572603E5233C9D8C061F4E /* Pods-desafioContaStoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStoneTests.debug.xcconfig"; path = "Target Support Files/Pods-desafioContaStoneTests/Pods-desafioContaStoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88C0A25D04BD145A517B0FAF /* Pods-desafioContaStone-desafioContaStoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStone-desafioContaStoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-desafioContaStone-desafioContaStoneUITests/Pods-desafioContaStone-desafioContaStoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A219070A8BD70D06871036E /* Pods-desafioContaStoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStoneTests.release.xcconfig"; path = "Target Support Files/Pods-desafioContaStoneTests/Pods-desafioContaStoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D5C59302B9765C86D09448D /* Pods-desafioContaStone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStone.release.xcconfig"; path = "Target Support Files/Pods-desafioContaStone/Pods-desafioContaStone.release.xcconfig"; sourceTree = "<group>"; };
+		C93F84EB255CBD5300A2F396 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C93F84F0255CBE1200A2F396 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
+		C93F84F5255CBE6D00A2F396 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
+		C93F84FA255CC3CE00A2F396 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		C93F8500255CC74A00A2F396 /* FactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactService.swift; sourceTree = "<group>"; };
 		C94BF941255C2070008B5A06 /* desafioContaStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafioContaStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94BF944255C2070008B5A06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94BF946255C2070008B5A06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +70,7 @@
 		C94BF962255C2073008B5A06 /* desafioContaStoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafioContaStoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94BF966255C2073008B5A06 /* desafioContaStoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafioContaStoneUITests.swift; sourceTree = "<group>"; };
 		C94BF968255C2073008B5A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E46B836F033B11DBAD6241E1 /* Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig"; path = "Target Support Files/Pods-desafioContaStone-desafioContaStoneUITests/Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E29B61ED2BF09AEC24109A8 /* Pods_desafioContaStone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				733B50DB4B9091201DA1E6EB /* Pods_desafioContaStoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +94,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF86E3EA519322F1C22BCCF /* Pods_desafioContaStone_desafioContaStoneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EAE7AB0A15B71C9AF0F3526 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				209EC8534691A0BDA6016DF8 /* Pods-desafioContaStone.debug.xcconfig */,
+				8D5C59302B9765C86D09448D /* Pods-desafioContaStone.release.xcconfig */,
+				88C0A25D04BD145A517B0FAF /* Pods-desafioContaStone-desafioContaStoneUITests.debug.xcconfig */,
+				E46B836F033B11DBAD6241E1 /* Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig */,
+				84572603E5233C9D8C061F4E /* Pods-desafioContaStoneTests.debug.xcconfig */,
+				8A219070A8BD70D06871036E /* Pods-desafioContaStoneTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C94BF938255C2070008B5A06 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +121,8 @@
 				C94BF95A255C2073008B5A06 /* desafioContaStoneTests */,
 				C94BF965255C2073008B5A06 /* desafioContaStoneUITests */,
 				C94BF942255C2070008B5A06 /* Products */,
+				5EAE7AB0A15B71C9AF0F3526 /* Pods */,
+				E8EBF2A191196400D18ECFA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +139,12 @@
 		C94BF943255C2070008B5A06 /* desafioContaStone */ = {
 			isa = PBXGroup;
 			children = (
+				C9D6223F255C9F160068B8E3 /* Model */,
+				C9D6223E255C9F000068B8E3 /* ViewModel */,
+				C9D62237255C9EF90068B8E3 /* View */,
 				C94BF944255C2070008B5A06 /* AppDelegate.swift */,
 				C94BF946255C2070008B5A06 /* SceneDelegate.swift */,
 				C94BF948255C2070008B5A06 /* ViewController.swift */,
-				C94BF94A255C2070008B5A06 /* Main.storyboard */,
 				C94BF94D255C2073008B5A06 /* Assets.xcassets */,
 				C94BF94F255C2073008B5A06 /* LaunchScreen.storyboard */,
 				C94BF952255C2073008B5A06 /* Info.plist */,
@@ -128,6 +170,43 @@
 			path = desafioContaStoneUITests;
 			sourceTree = "<group>";
 		};
+		C9D62237255C9EF90068B8E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C94BF94A255C2070008B5A06 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9D6223E255C9F000068B8E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C93F84EB255CBD5300A2F396 /* AppCoordinator.swift */,
+				C93F84F0255CBE1200A2F396 /* FactViewModel.swift */,
+				C93F84F5255CBE6D00A2F396 /* FactsListViewModel.swift */,
+				C93F8500255CC74A00A2F396 /* FactService.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C9D6223F255C9F160068B8E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C93F84FA255CC3CE00A2F396 /* Fact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8EBF2A191196400D18ECFA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47411819B5FCD88EBC877A35 /* Pods_desafioContaStone.framework */,
+				676F94FBFF867B4EB603A983 /* Pods_desafioContaStone_desafioContaStoneUITests.framework */,
+				60BEDD17CD233427C6ABC84C /* Pods_desafioContaStoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C94BF96B255C2073008B5A06 /* Build configuration list for PBXNativeTarget "desafioContaStone" */;
 			buildPhases = (
+				E24BBF0D3B8C6DC28604D5B1 /* [CP] Check Pods Manifest.lock */,
 				C94BF93D255C2070008B5A06 /* Sources */,
 				C94BF93E255C2070008B5A06 /* Frameworks */,
 				C94BF93F255C2070008B5A06 /* Resources */,
+				DFE91EC4FF6B3D300F13779D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C94BF96E255C2073008B5A06 /* Build configuration list for PBXNativeTarget "desafioContaStoneTests" */;
 			buildPhases = (
+				AD3AF1C3FB4B10CF82627C7E /* [CP] Check Pods Manifest.lock */,
 				C94BF953255C2073008B5A06 /* Sources */,
 				C94BF954255C2073008B5A06 /* Frameworks */,
 				C94BF955255C2073008B5A06 /* Resources */,
@@ -170,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C94BF971255C2073008B5A06 /* Build configuration list for PBXNativeTarget "desafioContaStoneUITests" */;
 			buildPhases = (
+				49D874EEA305365C9FF55ABE /* [CP] Check Pods Manifest.lock */,
 				C94BF95E255C2073008B5A06 /* Sources */,
 				C94BF95F255C2073008B5A06 /* Frameworks */,
 				C94BF960255C2073008B5A06 /* Resources */,
+				B26DD82F152E5BE773B53002 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,13 +337,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49D874EEA305365C9FF55ABE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafioContaStone-desafioContaStoneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD3AF1C3FB4B10CF82627C7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafioContaStoneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B26DD82F152E5BE773B53002 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafioContaStone-desafioContaStoneUITests/Pods-desafioContaStone-desafioContaStoneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafioContaStone-desafioContaStoneUITests/Pods-desafioContaStone-desafioContaStoneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-desafioContaStone-desafioContaStoneUITests/Pods-desafioContaStone-desafioContaStoneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFE91EC4FF6B3D300F13779D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafioContaStone/Pods-desafioContaStone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafioContaStone/Pods-desafioContaStone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-desafioContaStone/Pods-desafioContaStone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E24BBF0D3B8C6DC28604D5B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-desafioContaStone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C94BF93D255C2070008B5A06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93F84F6255CBE6D00A2F396 /* FactsListViewModel.swift in Sources */,
+				C93F84EC255CBD5300A2F396 /* AppCoordinator.swift in Sources */,
 				C94BF949255C2070008B5A06 /* ViewController.swift in Sources */,
+				C93F8501255CC74A00A2F396 /* FactService.swift in Sources */,
 				C94BF945255C2070008B5A06 /* AppDelegate.swift in Sources */,
+				C93F84FB255CC3CF00A2F396 /* Fact.swift in Sources */,
+				C93F84F1255CBE1200A2F396 /* FactViewModel.swift in Sources */,
 				C94BF947255C2070008B5A06 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +625,7 @@
 		};
 		C94BF96C255C2073008B5A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 209EC8534691A0BDA6016DF8 /* Pods-desafioContaStone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +645,7 @@
 		};
 		C94BF96D255C2073008B5A06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D5C59302B9765C86D09448D /* Pods-desafioContaStone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +665,7 @@
 		};
 		C94BF96F255C2073008B5A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84572603E5233C9D8C061F4E /* Pods-desafioContaStoneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +688,7 @@
 		};
 		C94BF970255C2073008B5A06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A219070A8BD70D06871036E /* Pods-desafioContaStoneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +711,7 @@
 		};
 		C94BF972255C2073008B5A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C0A25D04BD145A517B0FAF /* Pods-desafioContaStone-desafioContaStoneUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +732,7 @@
 		};
 		C94BF973255C2073008B5A06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E46B836F033B11DBAD6241E1 /* Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
