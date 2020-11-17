@@ -33,12 +33,14 @@ class ViewController: UIViewController{
         factTableView.tableFooterView = UIView()
         factTableView.allowsSelection = false
         navigationItem.title = viewModel.title
+        self.hideKeyboardWhenTappedAround()
 
         
     }
 
     @IBAction func searchButton(_ sender: Any) {
         factService.search = searchTextField.text!
+        
         getFacts()
        
     }
@@ -46,17 +48,17 @@ class ViewController: UIViewController{
     func getFacts(){
         factTableView.dataSource = nil
         factTableView.delegate = nil
+        factTableView.reloadData()
         viewModel.fetchFactViewModels(search: searchTextField.text!).observeOn(MainScheduler.instance).bind(to: factTableView.rx.items(cellIdentifier: "cell",cellType: FactCell.self)){
             index,viewModel,cell in
             cell.factText.text = viewModel.factText
-            if self.factText.count <= 80 {
+            if viewModel.factText.count <= 80 {
                 cell.factText?.font = UIFont.systemFont(ofSize: 30)
             }else{
                 cell.factText?.font = UIFont.systemFont(ofSize: 15)
             }
             cell.category.text = viewModel.categoryText
             cell.id = viewModel.id
-        
         }.disposed(by: disposeBag)
     }
 
@@ -64,4 +66,14 @@ class ViewController: UIViewController{
 
     
 }
-
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

@@ -18,6 +18,7 @@ class FactService: FactServiceProtocol{
     var fact: Fact?
     var search: String = ""
     var factsArray: [Fact] = []
+    
 
     var url = "https://api.chucknorris.io/jokes/search?query="
     
@@ -33,10 +34,8 @@ class FactService: FactServiceProtocol{
 
                 guard let data = data else{
                     observer.onError(NSError(domain: "", code: -1, userInfo: nil))
-                    return //Disposables.create { }
+                    return
                 }
-                
-//                var json: Any!
                 do{
                   
                    let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: AnyObject]
@@ -46,14 +45,20 @@ class FactService: FactServiceProtocol{
                        
                         self.factText = (fact as AnyObject)["value"] as? String ?? ""
                         self.id = (fact as AnyObject)["id"] as? String ?? ""
-                        self.category = (fact as AnyObject)["categories"] as? String ?? "Uncategorized"
-                        let fact = Fact(fact:self.factText, category:  Category(rawValue: self.category), id: self.id)
+                        let category = (fact as AnyObject)["categories"] as? NSArray
+
+                        
+                        if category?.count == 0 {
+                            self.category = "Uncategorized"
+                        }else{
+                            self.category = category?.object(at: 0) as! String
+                        }
+                        let fact = Fact(fact:self.factText, category:  self.category, id: self.id)
         
                         factsArray.append(fact)
                     
                     }
-
-//                    print("factsArray: \(factsArray)")
+                    
                     observer.onNext(factsArray)
                 }catch{
                     observer.onError(error)

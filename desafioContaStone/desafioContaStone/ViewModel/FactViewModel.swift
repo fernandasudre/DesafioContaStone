@@ -14,7 +14,7 @@ struct FactViewModel{
     }
     var categoryText: String{
         
-        return fact.category?.rawValue.capitalized ?? "Uncategorized"
+        return fact.category.capitalized ?? "Uncategorized"
     }
     
     var id: String{
