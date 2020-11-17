@@ -18,7 +18,6 @@ class ViewController: UIViewController{
     let disposeBag = DisposeBag()
     private var viewModel: FactsListViewModel!
     let factService = FactService()
-
     
     static func instantiate(viewModel:FactsListViewModel) -> ViewController{
         
@@ -60,6 +59,7 @@ class ViewController: UIViewController{
         
         }.disposed(by: disposeBag)
     }
+
 
 
     
