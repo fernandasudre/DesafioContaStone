@@ -23,6 +23,7 @@
 		C94BF951255C2073008B5A06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94BF94F255C2073008B5A06 /* LaunchScreen.storyboard */; };
 		C94BF95C255C2073008B5A06 /* desafioContaStoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BF95B255C2073008B5A06 /* desafioContaStoneTests.swift */; };
 		C94BF967255C2073008B5A06 /* desafioContaStoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BF966255C2073008B5A06 /* desafioContaStoneUITests.swift */; };
+		C97DCBCC25601FCD008DAA88 /* FactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DCBCB25601FCC008DAA88 /* FactCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		C94BF962255C2073008B5A06 /* desafioContaStoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafioContaStoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94BF966255C2073008B5A06 /* desafioContaStoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafioContaStoneUITests.swift; sourceTree = "<group>"; };
 		C94BF968255C2073008B5A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97DCBCB25601FCC008DAA88 /* FactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCell.swift; sourceTree = "<group>"; };
 		E46B836F033B11DBAD6241E1 /* Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig"; path = "Target Support Files/Pods-desafioContaStone-desafioContaStoneUITests/Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				C93F84FA255CC3CE00A2F396 /* Fact.swift */,
+				C97DCBCB25601FCC008DAA88 /* FactCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				C94BF945255C2070008B5A06 /* AppDelegate.swift in Sources */,
 				C93F84FB255CC3CF00A2F396 /* Fact.swift in Sources */,
 				C93F84F1255CBE1200A2F396 /* FactViewModel.swift in Sources */,
+				C97DCBCC25601FCD008DAA88 /* FactCell.swift in Sources */,
 				C94BF947255C2070008B5A06 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

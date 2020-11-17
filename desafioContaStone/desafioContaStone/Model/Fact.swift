@@ -12,6 +12,9 @@ struct Fact: Decodable{
     let category: Category?
     let id: String?
 }
+struct FactId:Decodable {
+    let text: String
+}
 
 enum Category: String, Decodable{
     case animal
@@ -30,5 +33,6 @@ enum Category: String, Decodable{
     case science
     case sport
     case travel
+    case `nil`
     
 }

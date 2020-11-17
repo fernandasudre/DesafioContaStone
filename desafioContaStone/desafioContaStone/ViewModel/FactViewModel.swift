@@ -17,6 +17,10 @@ struct FactViewModel{
         return fact.category?.rawValue.capitalized ?? "Uncategorized"
     }
     
+    var id: String{
+        
+        return fact.id!
+    }
     init(fact: Fact) {
         self.fact = fact
     }

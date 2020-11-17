@@ -9,52 +9,52 @@ import Foundation
 import  RxSwift
 
 protocol FactServiceProtocol{
-    func fetchFacts() -> Observable<[Fact]>
+    func fetchFacts(search term: String) -> Observable<[Fact]>
 }
-class FactService{
-    var fact: String = ""
+class FactService: FactServiceProtocol{
+    var factText: String = ""
     var category: String = ""
     var id: String = ""
-//    func execute<T: Decodable>(url: URL) -> Observable<T>{
-//
-//        return Observable.create{ observer -> Disposable in
-//            let task = URLSession.shared.dataTask(with: url) { data,_,_ in
-//                guard let data = data, let decoded = try? JSONDecoder().decode(T.self, from: data) else { return }
-//                observer.onNext(decoded)
-//                observer.onCompleted()
-//            }
-//            task.resume()
-//            return Disposables.create {
-//                task.cancel()
-//            }
-//        }
-//    }
+    var fact: Fact?
+    var search: String = ""
+    var factsArray: [Fact] = []
+
+    var url = "https://api.chucknorris.io/jokes/search?query="
     
-    func fetchFacts() -> Observable<[Fact]> {
-        let url = "https://api.chucknorris.io/jokes/random?category=dev"
+    static var shared = FactService()
+    
+///Function that
+    func fetchFacts(search term: String) -> Observable<[Fact]> {
+        url = "\(self.url)\(term)"
         return Observable.create{ observer -> Disposable in
 
-            let task = URLSession.shared.dataTask(with: URL(string: url)!) {
+            let task = URLSession.shared.dataTask(with: URL(string: self.url )!) { [self]
                 data, response,error in
 
                 guard let data = data else{
                     observer.onError(NSError(domain: "", code: -1, userInfo: nil))
                     return //Disposables.create { }
                 }
-                print(data)
-
-                var json: Any!
+                
+//                var json: Any!
                 do{
                   
-                    json = try JSONSerialization.jsonObject(with: data, options: [])
-              
-                    if let facts = json as? [String:Any]{
-                        self.fact = facts["value"] as? String ?? ""
-                        self.category = facts["category"] as? String ?? "Uncategorized"
-                        self.id = facts["id"] as? String ?? ""
+                   let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: AnyObject]
 
+                    for fact in json["result"] as! NSMutableArray{
+                        
+                       
+                        self.factText = (fact as AnyObject)["value"] as? String ?? ""
+                        self.id = (fact as AnyObject)["id"] as? String ?? ""
+                        self.category = (fact as AnyObject)["categories"] as? String ?? "Uncategorized"
+                        let fact = Fact(fact:self.factText, category:  Category(rawValue: self.category), id: self.id)
+        
+                        factsArray.append(fact)
+                    
                     }
-//                    observer.onNext(facts)
+
+//                    print("factsArray: \(factsArray)")
+                    observer.onNext(factsArray)
                 }catch{
                     observer.onError(error)
                 }

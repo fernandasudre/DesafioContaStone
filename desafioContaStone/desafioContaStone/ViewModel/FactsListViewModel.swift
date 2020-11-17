@@ -9,22 +9,19 @@ import Foundation
 import RxSwift
 
 final class FactsListViewModel{
+    ///Title of the view
     let title = "Chuck Norris Facts"
     
+    ///Instance of Fact Service
     private let factService = FactService()
-    private let baseURL = "https://api.chucknorris.io/jokes/random"
+   
     
-//    init(factService: factservice) {
-//        self.factService = factService
-//    }
-    
-    func  fetchFactViewModels() -> Observable<[FactViewModel]>{
-        factService.fetchFacts().map{ $0.map{
+
+    ///Function that maps all of the elements of the search
+    func  fetchFactViewModels(search term: String) -> Observable<[FactViewModel]>{
+        factService.fetchFacts(search: term).map{ $0.map{
             FactViewModel(fact: $0)
         }}
     }
-//    func getFacts() -> Observable<[Fact]>{
-//        return factService.execute(url: URL(string: baseURL)!)
-//    }
-    
+
 }
