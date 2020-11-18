@@ -12,7 +12,5 @@ struct Fact: Decodable{
     let category: String
     let id: String?
 }
-struct FactId:Decodable {
-    let text: String
-}
+
 

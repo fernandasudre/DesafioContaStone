@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="desafioContaStone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="desafioContaStone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="18" y="137" width="378" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="259" id="9RA-Jc-JVI" customClass="FactCell" customModule="desafioContaStone" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="factCell" rowHeight="259" id="9RA-Jc-JVI" customClass="FactCell" customModule="desafioContaStone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="378" height="259"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9RA-Jc-JVI" id="Zrx-Ki-bLd">
@@ -90,11 +90,20 @@
                                     <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcW-Ny-Nu2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDq-DJ-Wsl">
+                                <rect key="frame" x="181" y="432" width="52" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCn-1N-69s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OxB-Sf-x6a" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0256696" id="5wd-Ro-1ck"/>
+                            <constraint firstItem="KDq-DJ-Wsl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="88l-9E-ggd"/>
                             <constraint firstItem="v9d-ow-Prx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AHB-dN-eGD"/>
                             <constraint firstItem="v9d-ow-Prx" firstAttribute="top" secondItem="ZHE-zg-dmc" secondAttribute="bottom" constant="36" id="FII-N0-i7G"/>
                             <constraint firstItem="ZHE-zg-dmc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="Fdv-1O-cxp"/>
@@ -104,13 +113,18 @@
                             <constraint firstItem="ZHE-zg-dmc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.806763" id="TG0-up-rlj"/>
                             <constraint firstItem="v9d-ow-Prx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.809152" id="aeJ-lU-oWA"/>
                             <constraint firstItem="ZHE-zg-dmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bNn-nz-QIK"/>
+                            <constraint firstItem="KDq-DJ-Wsl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bxi-YM-dLi"/>
+                            <constraint firstItem="KDq-DJ-Wsl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.125604" id="hbf-2N-GYw"/>
                             <constraint firstItem="ZHE-zg-dmc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0379464" id="hcs-ug-gWh"/>
+                            <constraint firstItem="KDq-DJ-Wsl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.046875" id="z29-mj-gnP"/>
                             <constraint firstItem="v9d-ow-Prx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.913043" id="zNn-mp-EOG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="factTableView" destination="v9d-ow-Prx" id="M5M-g2-WvN"/>
+                        <outlet property="searchButton" destination="OxB-Sf-x6a" id="94U-oD-iCG"/>
                         <outlet property="searchTextField" destination="ZHE-zg-dmc" id="mGB-rh-cLI"/>
+                        <outlet property="startButton" destination="KDq-DJ-Wsl" id="jj3-v4-T8L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

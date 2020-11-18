@@ -24,6 +24,7 @@
 		C94BF95C255C2073008B5A06 /* desafioContaStoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BF95B255C2073008B5A06 /* desafioContaStoneTests.swift */; };
 		C94BF967255C2073008B5A06 /* desafioContaStoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BF966255C2073008B5A06 /* desafioContaStoneUITests.swift */; };
 		C97DCBCC25601FCD008DAA88 /* FactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DCBCB25601FCC008DAA88 /* FactCell.swift */; };
+		C9E4B4EE25647A5F00A7665B /* ViewController+KeyboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E4B4ED25647A5F00A7665B /* ViewController+KeyboardUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		C94BF966255C2073008B5A06 /* desafioContaStoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafioContaStoneUITests.swift; sourceTree = "<group>"; };
 		C94BF968255C2073008B5A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97DCBCB25601FCC008DAA88 /* FactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCell.swift; sourceTree = "<group>"; };
+		C9E4B4ED25647A5F00A7665B /* ViewController+KeyboardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+KeyboardUtils.swift"; sourceTree = "<group>"; };
 		E46B836F033B11DBAD6241E1 /* Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig"; path = "Target Support Files/Pods-desafioContaStone-desafioContaStoneUITests/Pods-desafioContaStone-desafioContaStoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +148,6 @@
 				C9D62237255C9EF90068B8E3 /* View */,
 				C94BF944255C2070008B5A06 /* AppDelegate.swift */,
 				C94BF946255C2070008B5A06 /* SceneDelegate.swift */,
-				C94BF948255C2070008B5A06 /* ViewController.swift */,
 				C94BF94D255C2073008B5A06 /* Assets.xcassets */,
 				C94BF94F255C2073008B5A06 /* LaunchScreen.storyboard */,
 				C94BF952255C2073008B5A06 /* Info.plist */,
@@ -183,10 +184,12 @@
 		C9D6223E255C9F000068B8E3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C94BF948255C2070008B5A06 /* ViewController.swift */,
 				C93F84EB255CBD5300A2F396 /* AppCoordinator.swift */,
 				C93F84F0255CBE1200A2F396 /* FactViewModel.swift */,
 				C93F84F5255CBE6D00A2F396 /* FactsListViewModel.swift */,
 				C93F8500255CC74A00A2F396 /* FactService.swift */,
+				C9E4B4ED25647A5F00A7665B /* ViewController+KeyboardUtils.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93F84F6255CBE6D00A2F396 /* FactsListViewModel.swift in Sources */,
+				C9E4B4EE25647A5F00A7665B /* ViewController+KeyboardUtils.swift in Sources */,
 				C93F84EC255CBD5300A2F396 /* AppCoordinator.swift in Sources */,
 				C94BF949255C2070008B5A06 /* ViewController.swift in Sources */,
 				C93F8501255CC74A00A2F396 /* FactService.swift in Sources */,

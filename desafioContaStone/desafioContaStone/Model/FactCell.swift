@@ -7,28 +7,27 @@
 
 import UIKit
 
-protocol ShareProtocol {
-    func shareButton(_ sender: Any)
-}
+
 class FactCell: UITableViewCell {
+    ///
     weak var viewController: ViewController?
+    ///Fact Label
     @IBOutlet weak var factText: UILabel!
-    
+    ///Share Button
     @IBOutlet weak var button: UIButton!
+    ///Category Label
     @IBOutlet weak var category: UILabel!
+    /// String that will receive the id of the fact
     var id: String = ""
+    ///Base url
     var url = "https://api.chucknorris.io/jokes/"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-
+    ///Function that assembles the url that will be shared and present the view to share
     @IBAction func shareButton(_ sender: Any) {
         guard let data = URL(string: "\(url)\(id)") else { return }
         print(data)

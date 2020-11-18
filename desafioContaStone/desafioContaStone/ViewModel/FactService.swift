@@ -20,13 +20,15 @@ class FactService: FactServiceProtocol{
     var factsArray: [Fact] = []
     
 
+    ///Base URL
     var url = "https://api.chucknorris.io/jokes/search?query="
     
     static var shared = FactService()
-    
-///Function that
+
+    ///Function that fetchs facts.
     func fetchFacts(search term: String) -> Observable<[Fact]> {
-        url = "\(self.url)\(term)"
+            url = "\(self.url)\(term)"
+        
         return Observable.create{ observer -> Disposable in
 
             let task = URLSession.shared.dataTask(with: URL(string: self.url )!) { [self]
@@ -47,7 +49,7 @@ class FactService: FactServiceProtocol{
                         self.id = (fact as AnyObject)["id"] as? String ?? ""
                         let category = (fact as AnyObject)["categories"] as? NSArray
 
-                        
+                        //Check the number of objects in the array of category
                         if category?.count == 0 {
                             self.category = "Uncategorized"
                         }else{
@@ -56,7 +58,6 @@ class FactService: FactServiceProtocol{
                         let fact = Fact(fact:self.factText, category:  self.category, id: self.id)
         
                         factsArray.append(fact)
-                    
                     }
                     
                     observer.onNext(factsArray)
@@ -69,8 +70,6 @@ class FactService: FactServiceProtocol{
             return Disposables.create {
                 task.cancel()
             }
-            
-            
         }
     }
 }
