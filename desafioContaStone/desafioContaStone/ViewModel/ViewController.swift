@@ -45,6 +45,7 @@ class ViewController: UIViewController{
         return viewController
     }
 
+    /// When the view loads sets some caracterists of the table view. Hides elements that should not be shown and uses UserDefaults to verify if it's the first time the user acesses the app.
     override func viewDidLoad() {
         super.viewDidLoad()
         factTableView.tableFooterView = UIView()
@@ -52,6 +53,7 @@ class ViewController: UIViewController{
         navigationItem.title = viewModel.title
         self.hideKeyboardWhenTappedAround()
         
+        //UserDefaults to verify if is the first time the app was build. Hides elements of the view that should not be seen
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             
@@ -69,7 +71,7 @@ class ViewController: UIViewController{
         }
     }
     
-
+/// Function that when the button is clicked shows the main view elements.
     @IBAction func startButton(_ sender: Any) {
         startButton.isHidden =  true
         factTableView.isHidden = false
@@ -91,10 +93,13 @@ class ViewController: UIViewController{
     func getFacts(){
         factTableView.dataSource = nil
         factTableView.delegate = nil
-        factTableView.reloadData()
+        
+        //Fetchs the facts and bind the information to the cell
         viewModel.fetchFactViewModels(search: searchTextField.text!).observeOn(MainScheduler.instance).bind(to: factTableView.rx.items(cellIdentifier: "factCell",cellType: FactCell.self)){
             index,viewModel,factCell in
+
             factCell.factText.text = viewModel.factText
+            //Check the number of characters
             if viewModel.factText.count <= self.characterLimit {
                 factCell.factText?.font = UIFont.systemFont(ofSize: CGFloat(self.biggerFont))
             }else{
@@ -104,6 +109,7 @@ class ViewController: UIViewController{
             factCell.id = viewModel.id
             
         }.disposed(by: disposeBag)
+        factTableView.reloadData()
     }
 
 

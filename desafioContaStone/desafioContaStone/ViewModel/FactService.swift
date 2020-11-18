@@ -25,26 +25,26 @@ class FactService: FactServiceProtocol{
     
     static var shared = FactService()
 
-    ///Function that fetchs facts.
+    ///Function that fetchs facts and return and Observable of a fact.
     func fetchFacts(search term: String) -> Observable<[Fact]> {
-            url = "\(self.url)\(term)"
         
         return Observable.create{ observer -> Disposable in
 
-            let task = URLSession.shared.dataTask(with: URL(string: self.url )!) { [self]
+            self.factsArray.removeAll()
+            //Starts a sessions with the url
+            let task = URLSession.shared.dataTask(with: URL(string: "\(self.url)\(term)" )!) { [self]
                 data, response,error in
-
                 guard let data = data else{
                     observer.onError(NSError(domain: "", code: -1, userInfo: nil))
                     return
                 }
                 do{
-                  
+                  //Convert the JSON to NSDictionary
                    let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: AnyObject]
 
                     for fact in json["result"] as! NSMutableArray{
                         
-                       
+                       //Atributes the fetched elements with the values
                         self.factText = (fact as AnyObject)["value"] as? String ?? ""
                         self.id = (fact as AnyObject)["id"] as? String ?? ""
                         let category = (fact as AnyObject)["categories"] as? NSArray
@@ -55,11 +55,12 @@ class FactService: FactServiceProtocol{
                         }else{
                             self.category = category?.object(at: 0) as! String
                         }
+                        //Creates a fact and append it to the array of facts.
                         let fact = Fact(fact:self.factText, category:  self.category, id: self.id)
         
                         factsArray.append(fact)
                     }
-                    
+            
                     observer.onNext(factsArray)
                 }catch{
                     observer.onError(error)
